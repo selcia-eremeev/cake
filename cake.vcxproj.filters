@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{45585aec-be5d-4d22-a6cf-528ddba12316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scene">
+      <UniqueIdentifier>{6a1e0d1d-f584-4595-b5ce-87555324b820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\obj">
+      <UniqueIdentifier>{3a3ce133-1137-409f-9a4f-f4d725ee9a3a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\sceneBase.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\obj\objectBase.cpp">
+      <Filter>src\obj</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include=".gitattributes" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\main.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
