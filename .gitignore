@@ -3,5 +3,5 @@
 Debug
 
 *.user
-*.vcproj
+*.vcxproj
 *.filters
