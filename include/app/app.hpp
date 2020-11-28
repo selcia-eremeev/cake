@@ -5,13 +5,12 @@
 
 
 class App {
-
-public:
 	int			KEY[256];
-	int			WIDTH	= 640;
-	int			HEIGHT	= 480;
-	int			DEPTH	= 16;
-	std::string NAME	= "歯に優しいケーキ";
+	int			WIDTH = 640;
+	int			HEIGHT = 480;
+	int			DEPTH = 16;
+	std::string NAME = "歯に優しいケーキ";
+public:
 
 	int Initialize(void);
 	int Update(void);

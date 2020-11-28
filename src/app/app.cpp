@@ -2,6 +2,7 @@
 
 #include <DxLib.h>
 #include "app/app.hpp"
+#include "scene/titleScene.hpp"
 
 int App::UpdateKeyStateAll(void) {
 	char Temp[256];
@@ -21,18 +22,19 @@ int App::Initialize(void) {
 	DxLib::ChangeWindowMode(TRUE);
 	DxLib::SetWindowTextA(APP->NAME.c_str());
 	DxLib::DxLib_Init();
+	DxLib::SetAlwaysRunFlag(TRUE);
 	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
 	DxLib::SetDrawScreen(DX_SCREEN_BACK);
 	return 0;
 }
 
 int App::Update(void) {
-
+	TITLESCENE->Update();
 	return 0;
 }
 
 int App::Render(void) {
-
+	TITLESCENE->Render();
 	return 0;
 }
 
