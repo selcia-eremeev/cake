@@ -1,7 +1,7 @@
 #pragma once
 
 #include "app/app.hpp"
-#include "scene/battle.hpp"
+#include "scene/battle/battle.hpp"
 
 int Battle::Initialize(void) {
 	return 0;

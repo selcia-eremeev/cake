@@ -3,8 +3,8 @@
 #include <DxLib.h>
 
 #include "app/app.hpp"
-#include "scene/title.hpp"
-#include "scene/battle.hpp"
+#include "scene/title/title.hpp"
+#include "scene/battle/battle.hpp"
 
 int App::UpdateKeyStateAll(void) {
 	char tempKey[256];
@@ -24,9 +24,8 @@ int App::Initialize(void) {
 	DxLib::ChangeWindowMode(TRUE);
 	DxLib::SetWindowTextA(APP->NAME.c_str());
 	DxLib::DxLib_Init();
-	DxLib::SetAlwaysRunFlag(TRUE);
-	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
 	DxLib::SetDrawScreen(DX_SCREEN_BACK);
+	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
 	return 0;
 }
 

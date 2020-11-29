@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <DxLib.h>
 
 
 constexpr auto STATE_TITLE = 1;
