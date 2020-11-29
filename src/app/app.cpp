@@ -2,13 +2,14 @@
 
 #include <DxLib.h>
 #include "app/app.hpp"
-#include "scene/titleScene.hpp"
+#include "scene/title.hpp"
+#include "scene/battle.hpp"
 
 int App::UpdateKeyStateAll(void) {
-	char Temp[256];
-	DxLib::GetHitKeyStateAll(Temp);
+	char tempKey[256];
+	DxLib::GetHitKeyStateAll(tempKey);
 	for (int i = 0; i < 256; i++) {
-		if (Temp[i] != 0) {
+		if (tempKey[i] != 0) {
 			APP->KEY[i]++;
 		} else {
 			APP->KEY[i] = 0;
@@ -29,12 +30,28 @@ int App::Initialize(void) {
 }
 
 int App::Update(void) {
-	TITLESCENE->Update();
+	switch (APP->STATE) {
+	case STATE_TITLE:
+		TITLE->Update();
+		break;
+	case STATE_BATTLE:
+		BATTLE->Update();
+		break;
+	}
 	return 0;
 }
 
 int App::Render(void) {
-	TITLESCENE->Render();
+	switch (APP->STATE) {
+	case STATE_TITLE:
+		DxLib::DrawFormatString(0, 0, DxLib::GetColor(255, 255, 255), "Scene: Title");
+		TITLE->Render();
+		break;
+	case STATE_BATTLE:
+		DxLib::DrawFormatString(0, 0, DxLib::GetColor(255, 255, 255), "Scene: Battle");
+		BATTLE->Render();
+		break;
+	}
 	return 0;
 }
 
