@@ -6,6 +6,11 @@
 #include "scene/title/title.hpp"
 #include "scene/battle/battle.hpp"
 
+App::App(void) {
+	ZeroMemory(App::KEY, sizeof(App::KEY));
+	return;
+}
+
 int App::UpdateKeyStateAll(void) {
 	char tempKey[256];
 	DxLib::GetHitKeyStateAll(tempKey);
