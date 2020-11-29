@@ -1,6 +1,7 @@
 #pragma once
 
 #include <DxLib.h>
+
 #include "app/app.hpp"
 #include "scene/title.hpp"
 #include "scene/battle.hpp"
